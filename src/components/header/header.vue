@@ -13,7 +13,18 @@
                     <el-menu-item index="2"><p class="nav">线上服务</p></el-menu-item>
                     <el-menu-item index="5"><p class="nav">线下培训</p></el-menu-item>
                     <el-menu-item index="4"><p class="nav">联系我们</p></el-menu-item>
-                    <el-menu-item index="3"><p class="nav">加入我们</p></el-menu-item>
+                    <el-menu-item index="3">
+                        <p class="nav">
+                            <el-dropdown @command="sumTypeCkeck">
+                                <span class="el-dropdown-link">
+                                    {{sumType}}
+                                </span>
+                                <el-dropdown-menu slot="dropdown">
+                                    <el-dropdown-item v-for="(item,index) in sumTypeArray" :key='index' v-text="item" :command="item">校园招聘</el-dropdown-item>
+                                </el-dropdown-menu>
+                            </el-dropdown>
+                        </p>
+                    </el-menu-item>
                 </el-menu>
             </div>
         </div>
@@ -22,7 +33,10 @@
 <script>
 export default {
     data(){
-        return{ }
+        return{ 
+            sumType: '加入我们',
+            sumTypeArray:['校园招聘','实习机会','社会招聘'],
+        }
     },
     computed:{
         getActive(){
@@ -33,34 +47,52 @@ export default {
         handleSelect(key, keyPath) {
           console.log(key)
             if (key == 1) {
-                // this.$router.push({path:'/index'})
-                // console.log("切换导航",this.$route.name)
-                console.log(11111)
-            }else if (key == 2) {
                 
-                // console.log("切换导航",this.$route.name)
+            }else if (key == 2) {
                 console.log(222222)
+            }else if(key==3){
+                console.log(333333)
+
             }else if (key == 4){
-                //  this.$router.push({path:'/creation/'})
-                console.log(33333)
+                 this.$router.push({path:'/contacts/'})
             }else if(key==5){
-              //榜单
-            //   this.$router.push({path:'/list'})
-            this.$router.push({path:'/training'})
-            console.log(44444)
+                this.$router.push({path:'/training'})
+                console.log(44444)
             }
         },
         goto(){
             this.$router.push({path:'/index'})
+        },
+        sumTypeCkeck(type){
+            // this.sumType=type
+            if(type=='社会招聘'){
+                this.$router.push({path:'/join'})
+            }else if(type=='校园招聘'){
+                this.$router.push({path:'/contact'})
+            }else if(type=='实习机会'){
+                this.$router.push({path:'/internship'})
+            }
         }
     }
 }
 </script>
 <style scoped lang="less">
 @media screen and (max-width: 1600px){
+    .el-dropdown{
+        display: block;
+        height: 100%;
+        vertical-align: inherit !important;
+        span{
+            display: inline-block;
+            height: 90px;
+            line-height: 90px;
+            font-size: 15px;
+        }
+    }
+    .el-dropdown-link {
+        cursor: pointer;
+    }
     .header-top{
-        // width: 1440px;
-        // width: 1397px;
         width: 1200px;
         display: flex;
         margin: 0 auto;
@@ -80,7 +112,6 @@ export default {
         display: flex;
         font-size: 19px;
         font-family: '微软雅黑';
-        // margin-left: 73px;
         margin-top: 18px;
         .picture{
             width: 54px;
@@ -94,7 +125,8 @@ export default {
     }
     .top-nav{
         margin-left: auto;
-        // margin-right: 84px;
+        height: 90px;
+        margin-right: -20px;
     }
     .nav{
         margin: 0;
@@ -111,22 +143,47 @@ export default {
     /deep/ .el-menu--horizontal>.el-menu-item{
         line-height: 90px;
         height: 100%;
+        // padding-right: 0 !important;
     }
     /deep/ .el-menu.el-menu--horizontal{
         height: 100%;
     }
+    .el-dropdown-menu{
+        position: absolute;
+        left: 1280px !important;
+        right: 140px;
+        font-size: 15px;
+    }
+    .el-dropdown-menu__item{
+        text-align: center;
+    }
+    .el-menu-item * {
+        vertical-align: inherit;
+    }
 }
 @media screen and (min-width: 1600px) {
+    .el-dropdown{
+        display: block;
+        height: 100%;
+        vertical-align: inherit !important;
+        span{
+            display: inline-block;
+            height: 90px; /* no */
+            line-height: 90px; /* no */
+            font-size: 15px; /* no */
+        }
+    }
+    .el-dropdown-link {
+        cursor: pointer;
+    }
     .header-top{
-        // width: 1440px; /* no */
         width: 1200px; /* no */
         display: flex;
         margin: 0 auto;
     }
     .header{
-        // display: flex;
         height: 90px; /* no */
-        width: 100%;
+        width: 100%; /* no */
         background: #f5f5f5;
         line-height: 29px; /* no */
     }
@@ -138,9 +195,8 @@ export default {
         display: flex;
         font-size: 19px; /* no */
         font-family: '微软雅黑';
-        // margin-left: 73px; /* no */
         margin-top: 18px; /* no */
-        .picture{ 
+        .picture{
             width: 54px; /* no */
             height: 54px; /* no */
             margin-right: 18px; /* no */
@@ -152,8 +208,8 @@ export default {
     }
     .top-nav{
         margin-left: auto;
-        // margin-right: 84px; /* no */
         height: 90px; /* no */
+        margin-right: -20px; /* no */
     }
     .nav{
         margin: 0;
@@ -173,6 +229,17 @@ export default {
     }
     /deep/ .el-menu.el-menu--horizontal{
         height: 100%;
+    }
+    .el-dropdown-menu{
+        position: absolute;
+        left: 75% !important;
+        font-size: 15px; /* no */
+    }
+    .el-dropdown-menu__item{
+        text-align: center;
+    }
+    .el-menu-item * {
+        vertical-align: inherit;
     }
 }
 </style>

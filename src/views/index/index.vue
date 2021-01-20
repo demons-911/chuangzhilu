@@ -1,20 +1,22 @@
 <template>
     <div class="home-page">
-        <headers></headers>
         <!-- 顶部 -->
         <div class="fb-position">
-            <!-- <div class="bg">
-                <img src="./image/background.png" alt="">
-            </div> -->
-            <div class="slogan">
-                <p class="first">创知路教育</p>
-                <p class="two">国内独树一帜的新形态K12教育机构</p>
-                <p class="three"><span class="rights"></span><span class="rights"></span></p>
-                <p class="four"><span>INNOEDGE</span>   <span>ACADEMY</span></p>
-                <p class="five"></p>
-                <p class="six">Domestic New Modality of K12 Education Serivce.</p>
+            <div style="position: relative;">
+                <div class="f-imgs">
+                    <img src="./image/background.png" alt="">
+                </div>
+                <div class="slogan">
+                    <p class="first">创知路教育</p>
+                    <p class="two">国内独树一帜的新形态K12教育机构</p>
+                    <p class="three"><span class="rights"></span><span class="rights"></span></p>
+                    <p class="four"><span>INNOEDGE</span>   <span>ACADEMY</span></p>
+                    <p class="five"></p>
+                    <p class="six">Domestic New Modality of K12 Education Serivce.</p>
+                </div>
             </div>
-
+            
+            
         </div>
         <!-- 公司简介 -->
         <div class="Introduction fb-company">
@@ -149,60 +151,37 @@
                 </div>
             </div>
         </div>
-        <!-- 底部 -->
-        <foot></foot>
     </div>
 </template>
-<script>
-import headers from '@/components/header/header'
-import foot from '@/components/foot'
-export default {
-    components: { headers,foot },
-    name: 'index'
-}
-</script>
+
 <style scoped lang="less">
 @media screen and (max-width: 1600px){
     .home-page{
         width: 100%;
         margin: 0 auto;
     }
-    .bg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        // width: 1440px; 
-        width: 100%; 
-        height: 558px; 
-        img{
-            width: 100%;
-            height: 100%;
-        }
-    }
     .fb-position{
-        // width: 1440px; 
         width: 100%;
-        margin: 0 auto;
-        position: relative;
-        height: 558px; 
-        background-image: url('./image/background.png');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        display:flex;
-        align-items:center;/*垂直居中*/
-        justify-content: center;/*水平居中*/
-    }
+        .f-imgs{
+            width: 100%;
+            height: auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
 
+    }
     .slogan{
-        // position: absolute;
-        // width: 1390px;
-        
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
         width: 1200px;
+        height: 316px;
         margin: auto;
-        // padding-top: 67px;
         color: #fff;
-        // top: 67px; 
-        // left: 47.6px; 
         text-align: left;
         font-family: '微软雅黑';
         
@@ -211,14 +190,11 @@ export default {
         }
         .first{
             font-size: 42px; 
-            // margin-bottom: 39px; 
-            // letter-spacing: 10px; 
             font-weight: bold; 
         }
         .two{
             font-size: 42px; 
             margin-bottom: 36px; 
-            // letter-spacing: 5px; 
         }
         .three{
             font-size: 15px; 
@@ -238,7 +214,6 @@ export default {
         .four{
             font-size: 42px; 
             font-family: '微软雅黑'; 
-            margin-bottom: 15px; 
             span:nth-child(2){
                 display: inline-block; 
                 margin-left: 20px; 
@@ -255,23 +230,21 @@ export default {
         background: #2E8FD4;
     }
     .Introduction{
-        // width: 1390px;
         width: 1200px;
         margin: 0 auto;
         display: flex;
-        // padding: 194px 0 54px;
         padding: 150px 0;
         line-height: 32px; 
         .Introduction-left{
             width: 646px; 
             .fb-Introduction{
-                width: 132px; 
+                width: 172px; 
                 text-align: left;
-                font-size: 32px; 
+                font-size: 42px; 
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444;
-                margin-top: 12px; 
+                margin-top: 20px; 
                 margin-bottom: 27px; 
             }
             .Introduction-content{
@@ -280,18 +253,15 @@ export default {
                 font-weight: normal;
                 color: #444;
                 text-align: left;
-                // letter-spacing: 3px; 
             }
             
         }
         .Introduction-right{
-            // width: 540px;
             position: relative;
             margin-left: auto;
             .img{
                 width: 412px; 
                 height: 208px; 
-                // margin-left: 59px; 
                 margin-top: 50px;
                 img{
                     width: 100%;
@@ -310,7 +280,6 @@ export default {
             }
         }
         .concept-right{
-            // margin-top: 50px; 
             width: 482px; 
             height: 166px; 
             margin-left: auto;
@@ -320,13 +289,8 @@ export default {
             }
         }
     }
-    // .fb-company{
-    //     padding: 113px 0 54px;
-    // }
     .business{
-        // width: 1440px; 
         width: 100%;
-        // margin: 0 auto;
         height: 773px; 
         background: #f6f6f6;
         overflow: hidden;
@@ -334,12 +298,13 @@ export default {
             width: 1200px;
             margin: 120px auto 0;
             .right-blue-bar{
-                margin: 0 0 12px 1152px; 
+                margin: 0 0 0 1152px; 
             }
             .fb-business{
+                margin-top: 20px;
                 text-align: right;
-                // padding-right: 83px; 
-                font-size: 25px; 
+                line-height: 32px;
+                font-size: 42px; 
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444444;
@@ -348,7 +313,6 @@ export default {
         .business-content{
             width: 1200px;
             display: flex; 
-            // padding: 0 37px 0 43px; 
             margin: 29px auto 0; 
             .extracurricular-training{
                 width: 281px; 
@@ -376,10 +340,8 @@ export default {
                     .contents{
                         margin: 29px auto; 
                         width: 224px; 
-                        // height: 370px; 
                         text-align: left;
                         line-height: 25px; 
-                        // letter-spacing: 3px; 
                         font-size: 15px; 
                     }
                 }
@@ -388,7 +350,7 @@ export default {
                 padding-top: 9px; 
                 height: 448px; 
                 .business-title{
-                    width: 182px; 
+                    width: 190px; 
                     height: 50px; 
                     text-align: center;
                     font-size: 21px; 
@@ -407,12 +369,8 @@ export default {
         }
     }
     .culture{
-        
-        // width: 1440px; 
         width: 100%;
-        
         background: #fff;
-        
         .fb-vn{
             display: flex; 
             width: 1200px;
@@ -420,10 +378,8 @@ export default {
             height: 316px; 
             overflow: hidden;
             .left-img{
-                // position: relative; 
                 width: 482px; 
                 height: 166px; 
-                // margin-top: 76px; 
                 margin-right: 82px; 
                 img{
                     display: block;
@@ -432,7 +388,6 @@ export default {
                 }
             }
             .right-content{
-                // margin-top: 76px; 
                 width: 625px;  
                 height: 239px; 
                 margin-left: auto;
@@ -440,11 +395,12 @@ export default {
                     display: flex;
                     margin-left: auto;
                     margin-top: 8px;
-                    margin-bottom: 13px; 
+                    margin-bottom: 20px; 
                 }
                 .fb-business{
                     text-align: right;
-                    font-size: 32px; 
+                    line-height: 32px;
+                    font-size: 42px; 
                     font-family: '微软雅黑';
                     font-weight: bold;
                     color: #444444;
@@ -459,42 +415,17 @@ export default {
                     font-weight: 400;
                     color: #444444;
                     line-height: 27px; 
-                    // letter-spacing: 3px; 
                 }
             }
-        }
-        
+        }   
     }
-    // .bottoms{
-    //     width: 100%;
-    //     height: 211px; 
-    //     background: #1C2533;
-    //     overflow: hidden;
-    //     .text{
-    //         margin-top: 69px; 
-    //         color: #fff;
-    //         text-align: center;
-            
-    //         div:nth-child(1){ 
-    //             font-size: 42px; 
-    //             font-family:'微软雅黑';
-    //             font-weight: bold;
-    //             // letter-spacing: 15px; 
-    //         }
-    //         div:nth-child(2){
-    //             font-size: 21px; 
-    //             font-family: '微软雅黑';
-    //             font-weight: 300;
-    //         }
-    //     }
-    // }
     .space{
         width: 100%;
         height: 20px; 
     }
     .spaces{
         width: 100%;
-        height: 35px; 
+        height: 13px; 
     }
     
     .left-point{
@@ -508,7 +439,6 @@ export default {
     .point{
         margin-bottom: 7px; 
     }
-
     .point::marker{
         color:#2E8FD4;
     }
@@ -518,87 +448,67 @@ export default {
         width: 100%;
         margin: 0 auto;
     }
-    .bg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        // width: 1440px; /* no */
-        width: 100%; /* no */
-        height: 558px; /* no */
-        img{
-            width: 100%;
-            height: 100%;
-        }
-    }
     .fb-position{
-        // width: 1440px; /* no */
         width: 100%;
-        margin: 0 auto;
-        position: relative;
-        height: 558px; /* no */
-        background-image: url('./image/background.png');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        display:flex;
-        align-items:center;/*垂直居中*/
-        justify-content: center;/*水平居中*/
+        .f-imgs{
+            width: 100%;
+            height: auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 
     .slogan{
-        // position: absolute;
-        
-        // top: 67px; /* no */
-        // left: 279px; /* no */
-        // left: 47.6px; /* no */
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
         width: 1200px; /* no */
+        height: 316px; /* no */
         margin: auto;
-        padding-top: 67px; /* no */
-        text-align: left;
         color: #fff;
+        text-align: left;
         font-family: '微软雅黑';
-        margin: 0 auto;
-        
         p{
-            margin-top: 0;
+            margin: 0;
         }
         .first{
-            font-size:42px; /* no */
-            // margin-bottom: 39px; /* no */
-            // letter-spacing: 10px; /* no */
-            font-weight: bold;
+            font-size: 42px;  /* no */
+            font-weight: bold; 
         }
         .two{
             font-size: 42px; /* no */
             margin-bottom: 36px; /* no */
-            // letter-spacing: 5px; /* no */
         }
         .three{
             font-size: 15px; /* no */
             height: 40px; /* no */
             margin-bottom: 36px; /* no */
             .rights{
-                display: inline-block;
+                display: inline-block; 
                 margin-top: 9px; /* no */
-                width: 18px; /* no */
-                height: 18px; /* no */
+                width: 18px;  /* no */
+                height: 18px;  /* no */
                 border-top: 3px solid #ffffff; /* no */
                 border-right: 3px solid #ffffff; /* no */
-                -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg); 
+                transform: rotate(45deg); 
             }
         }
         .four{
             font-size: 42px; /* no */
-            font-family: '微软雅黑';
-            margin-bottom: 22px; /* no */
+            font-family: '微软雅黑'; 
             span:nth-child(2){
-                display: inline-block;
+                display: inline-block; 
                 margin-left: 20px; /* no */
             }
         }
         .six{
             font-size: 30px; /* no */
-            font-family: '微软雅黑';
+            font-family: '微软雅黑'; 
         }
     }
     .blue-bar{
@@ -615,13 +525,13 @@ export default {
         .Introduction-left{
             width: 646px; /* no */
             .fb-Introduction{
-                width: 132px; /* no */
+                width: 172px; /* no */
                 text-align: left;
-                font-size: 32px; /* no */
+                font-size: 42px; /* no */
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444;
-                margin-top: 12px; /* no */
+                margin-top: 20px; /* no */
                 margin-bottom: 27px; /* no */
             }
             .Introduction-content{
@@ -630,18 +540,15 @@ export default {
                 font-weight: normal;
                 color: #444;
                 text-align: left;
-                // letter-spacing: 3px; /* no */
             }
             
         }
         .Introduction-right{
-            // width: 540px; /* no */
             position: relative;
             margin-left: auto;
             .img{
                 width: 412px; /* no */
                 height: 208px; /* no */
-                // margin-left: 59px; /* no */
                 margin-top: 50px;/* no */
                 img{
                     width: 100%;
@@ -660,7 +567,6 @@ export default {
             }
         }
         .concept-right{
-            // margin-top: 50px; /* no */
             width: 482px; /* no */
             height: 166px; /* no */
             margin-left: auto;
@@ -670,13 +576,8 @@ export default {
             }
         }
     }
-    // .fb-company{
-    //     padding: 113px 0 54px; /* no */
-    // }
     .business{
-        // width: 1440px; /* no */
         width: 100%; 
-        // margin: 0 auto;
         height: 773px; /* no */
         background: #f6f6f6;
         overflow: hidden;
@@ -684,12 +585,13 @@ export default {
             width: 1200px; /* no */
             margin: 120px auto 0; /* no */
             .right-blue-bar{
-                margin: 0 0 12px 1152px; /* no */
+                margin: 0 0 20px 1152px; /* no */
             }
             .fb-business{
+                margin-top: 20px; /* no */
                 text-align: right;
-                // padding-right: 83px; /* no */
-                font-size: 25px; /* no */
+                line-height: 32px; /* no */
+                font-size: 42px; /* no */
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444444;
@@ -698,7 +600,6 @@ export default {
         .business-content{
             display: flex; 
             width: 1200px; /* no */
-            // padding: 0 37px 0 43px; /* no */
             margin: 29px auto 0; /* no */
             .extracurricular-training{
                 width: 281px; /* no */
@@ -726,10 +627,8 @@ export default {
                     .contents{
                         margin: 29px auto; /* no */
                         width: 224px; /* no */
-                        // height: 370px; /* no */
                         text-align: left;
                         line-height: 25px; /* no */
-                        // letter-spacing: 3px; /* no */
                         font-size: 15px; /* no */
                     }
                 }
@@ -738,7 +637,7 @@ export default {
                 padding-top: 9px; /* no */
                 height: 448px; /* no */
                 .business-title{
-                    width: 182px; /* no */
+                    width: 190px; /* no */
                     height: 50px; /* no */
                     text-align: center;
                     font-size: 21px; /* no */
@@ -768,10 +667,8 @@ export default {
             overflow: hidden;
         }
         .left-img{
-            // position: relative; 
             width: 482px; /* no */
             height: 166px; /* no */
-            // margin-top: 76px; /* no */
             margin-right: 82px; /* no */
             img{
                 display: block;
@@ -780,7 +677,6 @@ export default {
             }
         }
         .right-content{
-            // margin-top: 76px; /* no */
             width: 625px;  /* no */
             height: 239px; /* no */
             margin-left: auto;
@@ -788,11 +684,12 @@ export default {
                 display: flex;
                 margin-left: auto;
                 margin-top: 8px; /* no */
-                margin-bottom: 13px; /* no */
+                margin-bottom: 20px; /* no */
             }
             .fb-business{
                 text-align: right;
-                font-size: 32px; /* no */
+                line-height: 32px; /* no */
+                font-size: 42px; /* no */
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444444;
@@ -807,30 +704,6 @@ export default {
                 font-weight: 400;
                 color: #444444;
                 line-height: 27px; /* no */
-                // letter-spacing: 3px; /* no */
-            }
-        }
-    }
-    .bottoms{
-        width: 100%;
-        height: 211px; /* no */
-        background: #1C2533;
-        overflow: hidden;
-        .text{
-            margin-top: 69px; /* no */
-            color: #fff;
-            text-align: center;
-            
-            div:nth-child(1){ 
-                font-size: 42px; /* no */
-                font-family:'微软雅黑';
-                font-weight: bold;
-                // letter-spacing: 15px; /* no */
-            }
-            div:nth-child(2){
-                font-size: 21px; /* no */
-                font-family: '微软雅黑';
-                font-weight: 300;
             }
         }
     }
@@ -840,7 +713,7 @@ export default {
     }
     .spaces{
         width: 100%;
-        height: 35px;  /* no */
+        height: 13px;  /* no */
     }
     .left-point{
         float: left;
