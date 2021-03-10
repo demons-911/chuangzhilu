@@ -12,7 +12,7 @@
                         </div>
                         <div>创知路联手各地优质教育机构，打造一系列线下培训学校。</div>
                         <div class="space"></div>
-                        <div>创知路线下培训学校，将优质的教学资源输入各大城市，提供小学、初中、高中课外培训服务</div>
+                        <div>创知路线下培训学校，将优质的教学资源输入各大城市，提供小学、初中、高中课外培训服务。</div>
                         <div class="space"></div>
                         <div>创知路路教学团队基于体系化教学研发，组建由清北、复浙交科人南、985毕业生组成的高质量师资团队，严控教学质量，组织更有效率的课外培优。</div>
                     </div>
@@ -644,23 +644,16 @@ export default {
                 if(windowScrollY > highs+total){
                     
                 }else{
-                    // console.log(this.pupop,562314)
                     let tab=document.getElementsByClassName('el-tabs__nav')[0] 
-                    // let arrow=document.getElementsByClassName('triangles')[0]
                     var high=Number(windowScrollY-total+margin)
                     var triangle=Number(windowScrollY-total+this.pupop)
-                    
-                
                     tab.setAttribute('style','margin-top:'+high+'px')
-                    // arrow.setAttribute('style','top:'+triangle+'px')
                 }   
             } else {
                 // 当滚动小于于一屏高度时的操作
                 let tab=document.getElementsByClassName('el-tabs__nav')[0]
                 tab.setAttribute('style','margin-top:'+margin+'px')
-                // let arrow=document.getElementsByClassName('triangles')[0]
-                // arrow.setAttribute('style','top:49px')
-            }  
+            }
         },
     },
     mounted() {
@@ -840,7 +833,7 @@ export default {
                             margin-bottom: 16px;
                         }
                         .left-content{
-                            width: 780px;
+                            width: 645px;
                             font-size: 16px;
                             font-family: '微软雅黑'; 
                             font-weight: 400;
@@ -849,7 +842,6 @@ export default {
                             display:-webkit-box;  // 使其变为伸缩盒
                             -webkit-line-clamp:2; // 设置其要显示的行数
                             -webkit-box-orient:vertical; // 规定子元素的排列方式
-                            width:100%;
                             overflow:hidden;
                             text-overflow:ellipsis;
                         }
@@ -1105,7 +1097,7 @@ export default {
         margin: 0 auto;
     }
     .shadow{
-        box-shadow: 8px 10px 0 0 rgba(85,85,85,0.09);
+        box-shadow: 5px 7px 0 0 rgba(85,85,85,0.05);
         border-radius: 15px;
     }
     .blue-bar{
@@ -1177,7 +1169,9 @@ export default {
             height: 100%;
         }
     }
+   
 }
+
 @media screen and(min-width: 1600px) {
     .training{
         .cooperation{
@@ -1345,7 +1339,7 @@ export default {
                             margin-bottom: 16px; /* no */
                         }
                         .left-content{
-                            width: 780px; /* no */
+                            width: 645px; /* no */
                             font-size: 16px; /* no */
                             font-family: '微软雅黑'; 
                             font-weight: 400;
@@ -1354,7 +1348,6 @@ export default {
                             display:-webkit-box;  // 使其变为伸缩盒
                             -webkit-line-clamp:2; // 设置其要显示的行数
                             -webkit-box-orient:vertical; // 规定子元素的排列方式
-                            width:100%;
                             overflow:hidden;
                             text-overflow:ellipsis;
                         }
@@ -1603,7 +1596,7 @@ export default {
         margin: 0 auto;
     }
     .shadow{
-        box-shadow: 8px 10px 0 0 rgba(85,85,85,0.09); /* no */
+        box-shadow: 5px 7px 0 0 rgba(85,85,85,0.05); /* no */
         border-radius: 15px; /* no */
     }
     .blue-bar{

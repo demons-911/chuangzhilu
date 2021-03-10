@@ -4,8 +4,8 @@
             <div class="school-recruitment">
                 <div class="top-line"></div>
                 <div class="social">校园招聘</div>
-                <div class="social-content">如果你也对教育怀抱纯粹对理想 </br> 如果你也想将优质教育资源传递给更多人</div>
-                <div class="blue-content">我们诚挚邀请你通过以下 <span>全职项目</span> 加入我们</div>
+                <div class="social-content">如果你也对教育怀抱纯粹对理想 <br> 如果你也想将优质教育资源传递给更多人</div>
+                <div class="blue-content">我们诚挚邀请你通过以下 <span>全职项目 加入我们</span></div>
             </div>
             <div class="content-img">
                 <img src="./image/school.png" alt="">
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="introduce">
-                        面向本科阶段就读于985高校，</br> 招募具备初中/小学教研授课能力的优秀人才。
+                        面向本科阶段就读于985高校，<br> 招募具备初中/小学教研授课能力的优秀人才。
                     </div>
                 </div>
                 <div class="right-img">
@@ -52,12 +52,13 @@
                         </div>
                     </div>
                     <div class="introduce">
-                        面向本科阶段就读于复旦、浙大、上交、</br>
-                        中科大、人大、南大的管理培训生计划，</br>
+                        面向本科阶段就读于复旦、浙大、上交、<br>
+                        中科大、人大、南大的管理培训生计划，<br>
                         招募具备初中/高中教研授课能力的优秀人才。
                     </div>
                 </div>
             </div>
+
             <div class="junior-school top">
                 <div class="left-content">   
                     <div class="titles">
@@ -68,18 +69,37 @@
                         </div>
                     </div>
                     <div class="introduce">
-                        面向本科阶段就读于清华、北大的管理培训生计划，</br> 招募具备高中教研授课能力的顶尖人才。
+                        面向本科阶段就读于清华、北大的管理培训生计划，<br> 招募具备高中教研授课能力的顶尖人才。
                     </div>
                 </div>
                 <div class="right-img">
                     <img src="./image/plan1.png" alt="">
                 </div>
             </div>
-            <div class="plan">
+            
+            <div class="plan planing">
                 <div class="left-img">
-                    <img src="./image/plans.png" alt="">
+                    <img src="./image/plan3.png" alt="">
                 </div>
                 <div class="right-content">   
+                    <div class="titles">
+                        <div class="vertical-bar"></div>
+                        <div class="title">
+                            <span>千里计划 </span>
+                            <span>/销售运营型管理培训生</span>
+                        </div>
+                    </div>
+                    <div class="introduce">
+                        向本科阶段就读于985高校的管理培训生计划，<br>
+                        招募具有教育理想、出色沟通能力和领导潜质的<br>
+                        优秀销售运营人才。
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="junior-school wood">
+                <div class="left-content">   
                     <div class="titles">
                         <div class="vertical-bar"></div>
                         <div class="title">
@@ -88,10 +108,13 @@
                         </div>
                     </div>
                     <div class="introduce">
-                        面向本科阶段就读于清华、北大的</br>
-                        管理培训生计划，招募具有教育理想、</br>
+                        面向本科阶段就读于清华、北大的<br>
+                        管理培训生计划，招募具有教育理想、<br>
                         发展潜力和领导潜质的优秀战略运营人才。
                     </div>
+                </div>
+                <div class="right-img">
+                    <img src="./image/plans.png" alt="">
                 </div>
             </div>
         </div>
@@ -142,7 +165,7 @@ export default {
                 height: 45px;
                 border-radius: 22px;
                 opacity: 0.9;
-                box-shadow: 0px 2px 8px 0px #F5F9FC;
+                box-shadow:inset 0px 2px 8px 0px #F5F9FC;
                 color: #fff;
                 font-size: 21px;
                 line-height: 45px;
@@ -210,9 +233,10 @@ export default {
     }
     .recruitments-content{
         width: 100%;
-        height: 1328px;
+        // height: 1328px;
         background: #f6f6f6;
         padding-top: 60px;
+        padding-bottom: 56px;
         .junior-school{
             display: flex;
             width: 1200px;
@@ -267,6 +291,9 @@ export default {
                 }
             }
         }
+        .wood{
+            margin-top: 45px;
+        }
         .plan{
             display: flex;
             width: 1200px;
@@ -320,6 +347,27 @@ export default {
                 }
             }
         }
+        .planing{
+            .left-img{
+                width: 449px;
+                height: 152px;
+                margin-left: 74px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .right-content{
+                .titles{
+                    margin-left: 155px;
+                }
+                .introduce{
+                    width: 450px;
+                    margin-left: 171px;
+                    line-height: 27px;
+                }
+            }
+        }
         .top{
             margin-top: 40px;
         }
@@ -363,7 +411,7 @@ export default {
                 height: 45px; /* no */
                 border-radius: 22px; /* no */
                 opacity: 0.9;
-                box-shadow: 0px 2px 8px 0px #F5F9FC; /* no */
+                box-shadow: inset 0px 2px 8px 0px #F5F9FC; /* no */
                 color: #fff;
                 font-size: 21px; /* no */
                 line-height: 45px; /* no */
@@ -431,9 +479,10 @@ export default {
     }
     .recruitments-content{
         width: 100%; 
-        height: 1328px; /* no */
+        // height: 1328px; /* no */
         background: #f6f6f6;
         padding-top: 60px; /* no */
+        padding-bottom: 56px; /* no */
         .junior-school{
             display: flex;
             width: 1200px; /* no */
@@ -481,12 +530,15 @@ export default {
             .right-img{
                 width: 590px; /* no */
                 height: 161px; /* no */
-                margin: 60px 0 0 auto; /* no *//* no */
+                margin: 60px 0 0 auto; /* no */
                 img{
                     width: 100%;
                     height: 100%;
                 }
             }
+        }
+        .wood{
+            margin-top: 45px; /* no */
         }
         .plan{
             display: flex;
@@ -538,6 +590,27 @@ export default {
                     color: #444444;
                     line-height: 27px; /* no */
                     margin: 24px 0 0 116px; /* no */
+                }
+            }
+        }
+        .planing{
+            .left-img{
+                width: 449px; /* no */
+                height: 152px; /* no */
+                margin-left: 74px; /* no */
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .right-content{
+                .titles{
+                    margin-left: 155px; /* no */
+                }
+                .introduce{
+                    width: 450px; /* no */
+                    margin-left: 171px; /* no */
+                    line-height: 27px; /* no */
                 }
             }
         }

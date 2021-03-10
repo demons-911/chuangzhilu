@@ -4,12 +4,15 @@
         <div class="fb-position">
             <div style="position: relative;">
                 <div class="f-imgs">
-                    <img src="./image/background.png" alt="">
+                    <img src="./image/banner.png" alt="">
                 </div>
                 <div class="slogan">
                     <p class="first">创知路教育</p>
                     <p class="two">国内独树一帜的新形态K12教育机构</p>
-                    <p class="three"><span class="rights"></span><span class="rights"></span></p>
+                    <p class="three">
+                        <!-- <span class="rights"></span><span class="rights"></span> -->
+                        <span class="lines"></span>
+                    </p>
                     <p class="four"><span>INNOEDGE</span>   <span>ACADEMY</span></p>
                     <p class="five"></p>
                     <p class="six">Domestic New Modality of K12 Education Serivce.</p>
@@ -19,27 +22,30 @@
             
         </div>
         <!-- 公司简介 -->
-        <div class="Introduction fb-company">
-            <div class="Introduction-left">
-                <div class="blue-bar"></div>
-                <div class="fb-Introduction">公司简介</div>
-                <div class="Introduction-content">
-                    <div>
-                        <div>创知路教育是国内独树一帜的新形态K12教育机构。</div>
-                        <div class="space spaces"></div>
-                        <div>公司业务包括 小初高课外培训 | 强基计划&学科竞赛规划与培训 | 教育机构管理咨询服务 | 学校合作课程服务。</div>
-                        <div class="space spaces"></div>
-                        <div>创知路致力于为国内升学体系的学生和家长提供专业的培训指导，为国内学校提供与学校教育互补的课程服务，为国内培训机构提供独特视角的咨询服务。</div>
+        <div class="gray">
+            <div class="Introduction fb-company">
+                <div class="Introduction-left">
+                    <div class="blue-bar"></div>
+                    <div class="fb-Introduction">公司简介</div>
+                    <div class="Introduction-content">
+                        <div>
+                            <div>创知路教育是国内独树一帜的新形态K12教育机构。</div>
+                            <div class="space spaces"></div>
+                            <div>公司业务包括 小初高课外培训 | 强基计划&学科竞赛规划与培训 | 教育机构管理咨询服务 | 学校合作课程服务。</div>
+                            <div class="space spaces"></div>
+                            <div>创知路致力于为国内升学体系的学生和家长提供专业的培训指导，为国内学校提供与学校教育互补的课程服务，为国内培训机构提供独特视角的咨询服务。</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="Introduction-right">
-                <div class="img">
-                    <img src="./image/Introduction.png" alt="">
+                <div class="Introduction-right">
+                    <div class="img">
+                        <img src="./image/Introduction1.png" alt="">
+                    </div>
+                    <!-- <div class="border"></div> -->
                 </div>
-                <div class="border"></div>
             </div>
         </div>
+        
         <!-- 业务介绍 -->
         <div class="business">
             <div class="fb-ad">
@@ -114,7 +120,7 @@
             </div>
         </div>
         <!-- 经营理念 -->
-        <div class="Introduction">
+        <div class="Introduction concept">
             <div class="Introduction-left">
                 <div class="blue-bar"></div>
                 <div class="fb-Introduction">经营理念</div>
@@ -133,14 +139,14 @@
                 </div>
             </div>
             <div class="concept-right">
-                    <img src="./image/concept.png" alt="">
+                    <img src="./image/concept1.png" alt="">
             </div>
         </div>
         <!-- 企业文化 -->
         <div class="culture">
             <div class="fb-vn">
                 <div class="left-img">
-                    <img src="./image/culture.png" alt="">
+                    <img src="./image/culture1.png" alt="">
                 </div>
                 <div class="right-content">
                     <div class="blue-bar right-blue-bar"></div>
@@ -159,12 +165,14 @@
     .home-page{
         width: 100%;
         margin: 0 auto;
+        background-color: #f6f6f6;
     }
     .fb-position{
         width: 100%;
         .f-imgs{
             width: 100%;
             height: auto;
+            background: #0c7ecf;
             img{
                 width: 100%;
                 height: 100%;
@@ -174,15 +182,15 @@
     }
     .slogan{
         position: absolute;
-        top:0;
-        bottom:0;
+        top: 179px;
+        // bottom:0;
         left:0;
         right:0;
         width: 1200px;
         height: 316px;
         margin: auto;
         color: #fff;
-        text-align: left;
+        text-align: center;
         font-family: '微软雅黑';
         
         p{
@@ -194,25 +202,21 @@
         }
         .two{
             font-size: 42px; 
-            margin-bottom: 36px; 
+            margin-bottom: 10px; 
         }
         .three{
             font-size: 15px; 
             height: 40px;
-            margin-bottom: 36px; 
-            .rights{
-                display: inline-block; 
-                margin-top: 9px;
-                width: 18px; 
-                height: 18px; 
-                border-top: 3px solid #ffffff; 
-                border-right: 3px solid #ffffff; 
-                -webkit-transform: rotate(45deg); 
-                transform: rotate(45deg); 
+            margin-bottom: 10px; 
+            .lines{
+                display: inline-block;
+                width: 89px;
+                height: 5px;
+                background-color: #fff;
             }
         }
         .four{
-            font-size: 42px; 
+            font-size: 40px; 
             font-family: '微软雅黑'; 
             span:nth-child(2){
                 display: inline-block; 
@@ -229,18 +233,22 @@
         height: 7px; 
         background: #2E8FD4;
     }
+    .gray{
+        width: 100%;
+        background-color: #fff;
+    }
     .Introduction{
         width: 1200px;
         margin: 0 auto;
         display: flex;
-        padding: 150px 0;
+        padding: 266px 0 195px;
         line-height: 32px; 
         .Introduction-left{
             width: 646px; 
             .fb-Introduction{
                 width: 172px; 
                 text-align: left;
-                font-size: 42px; 
+                font-size: 32px; 
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444;
@@ -259,44 +267,40 @@
         .Introduction-right{
             position: relative;
             margin-left: auto;
+            margin-top: -71px;
             .img{
-                width: 412px; 
-                height: 208px; 
-                margin-top: 50px;
+                width: 583px; 
+                height: 458px; 
+                margin-right: -131px;
                 img{
                     width: 100%;
                     height: 100%;
                 }
             }
-            .border{
-                position: absolute;
-                top: 92px; 
-                left: 86px; 
-                width: 364px; 
-                height: 203px; 
-                border: 3px solid #0C7FCF;
-                z-index: -99;
-                margin: 0;
-            }
         }
         .concept-right{
-            width: 482px; 
-            height: 166px; 
-            margin-left: auto;
+            width: 626px; 
+            height: 385px; 
+            margin-right: -117px;
+            margin-top: -118px;
             img{
                 width: 100%;
                 height: 100%;
             }
         }
     }
+    .concept{
+        padding-top: 326px;
+        padding-bottom: 0;
+    }
     .business{
         width: 100%;
-        height: 773px; 
+        height: 722px; 
         background: #f6f6f6;
         overflow: hidden;
         .fb-ad{
             width: 1200px;
-            margin: 120px auto 0;
+            margin: 174px auto 0;
             .right-blue-bar{
                 margin: 0 0 0 1152px; 
             }
@@ -304,7 +308,7 @@
                 margin-top: 20px;
                 text-align: right;
                 line-height: 32px;
-                font-size: 42px; 
+                font-size: 32px; 
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444444;
@@ -370,17 +374,20 @@
     }
     .culture{
         width: 100%;
-        background: #fff;
+        background: #f6f6f6;
+        margin-top: 193px;
+       padding-bottom: 216px;
         .fb-vn{
             display: flex; 
             width: 1200px;
             margin: 0 auto;
-            height: 316px; 
-            overflow: hidden;
+            // height: 316px; 
+            // overflow: hidden;
             .left-img{
-                width: 482px; 
-                height: 166px; 
-                margin-right: 82px; 
+                width: 615px; 
+                height: 419px; 
+                // margin-right: 82px; 
+                margin-left: -137px;
                 img{
                     display: block;
                     width: 100%;
@@ -390,6 +397,7 @@
             .right-content{
                 width: 625px;  
                 height: 239px; 
+                margin-top: 88px;
                 margin-left: auto;
                 .right-blue-bar{
                     display: flex;
@@ -400,7 +408,7 @@
                 .fb-business{
                     text-align: right;
                     line-height: 32px;
-                    font-size: 42px; 
+                    font-size: 32px; 
                     font-family: '微软雅黑';
                     font-weight: bold;
                     color: #444444;
@@ -447,59 +455,57 @@
     .home-page{
         width: 100%;
         margin: 0 auto;
+        background-color: #f6f6f6;
     }
     .fb-position{
         width: 100%;
         .f-imgs{
             width: 100%;
             height: auto;
+            background: #0c7ecf;
             img{
                 width: 100%;
                 height: 100%;
             }
         }
-    }
 
+    }
     .slogan{
         position: absolute;
-        top:0;
-        bottom:0;
+        top: 179px;/* no */
         left:0;
         right:0;
-        width: 1200px; /* no */
-        height: 316px; /* no */
+        width: 1200px;/* no */
+        height: 316px;/* no */
         margin: auto;
         color: #fff;
-        text-align: left;
+        text-align: center;
         font-family: '微软雅黑';
+        
         p{
             margin: 0;
         }
         .first{
-            font-size: 42px;  /* no */
+            font-size: 42px; /* no */
             font-weight: bold; 
         }
         .two{
             font-size: 42px; /* no */
-            margin-bottom: 36px; /* no */
+            margin-bottom: 10px; /* no */
         }
         .three{
             font-size: 15px; /* no */
-            height: 40px; /* no */
-            margin-bottom: 36px; /* no */
-            .rights{
-                display: inline-block; 
-                margin-top: 9px; /* no */
-                width: 18px;  /* no */
-                height: 18px;  /* no */
-                border-top: 3px solid #ffffff; /* no */
-                border-right: 3px solid #ffffff; /* no */
-                -webkit-transform: rotate(45deg); 
-                transform: rotate(45deg); 
+            height: 40px;/* no */
+            margin-bottom: 10px; /* no */
+            .lines{
+                display: inline-block;
+                width: 89px;/* no */
+                height: 5px;/* no */
+                background-color: #fff;
             }
         }
         .four{
-            font-size: 42px; /* no */
+            font-size: 40px; /* no */
             font-family: '微软雅黑'; 
             span:nth-child(2){
                 display: inline-block; 
@@ -516,18 +522,22 @@
         height: 7px; /* no */
         background: #2E8FD4;
     }
+    .gray{
+        width: 100%;
+        background-color: #fff;
+    }
     .Introduction{
-        width: 1200px; /* no */
+        width: 1200px;/* no */
         margin: 0 auto;
         display: flex;
-        padding: 150px 0; /* no */
+        padding: 266px 0 195px;/* no */
         line-height: 32px; /* no */
         .Introduction-left{
             width: 646px; /* no */
             .fb-Introduction{
                 width: 172px; /* no */
                 text-align: left;
-                font-size: 42px; /* no */
+                font-size: 32px; /* no */
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444;
@@ -546,60 +556,56 @@
         .Introduction-right{
             position: relative;
             margin-left: auto;
+            margin-top: -71px;/* no */
             .img{
-                width: 412px; /* no */
-                height: 208px; /* no */
-                margin-top: 50px;/* no */
+                width: 583px; /* no */
+                height: 458px; /* no */
+                margin-right: -131px;/* no */
                 img{
                     width: 100%;
                     height: 100%;
                 }
             }
-            .border{
-                position: absolute;
-                top: 92px; /* no */
-                left: 86px; /* no */
-                width: 364px; /* no */
-                height: 203px; /* no */
-                border: 3px solid #0C7FCF; /* no */
-                z-index: -99;
-                margin: 0;
-            }
         }
         .concept-right{
-            width: 482px; /* no */
-            height: 166px; /* no */
-            margin-left: auto;
+            width: 626px; /* no */
+            height: 385px; /* no */
+            margin-right: -117px;/* no */
+            margin-top: -118px;/* no */
             img{
                 width: 100%;
                 height: 100%;
             }
         }
     }
+    .concept{
+        padding-top: 326px;/* no */
+        padding-bottom: 0;
+    }
     .business{
-        width: 100%; 
-        height: 773px; /* no */
+        width: 100%;
+        height: 722px; /* no */
         background: #f6f6f6;
         overflow: hidden;
         .fb-ad{
-            width: 1200px; /* no */
-            margin: 120px auto 0; /* no */
+            width: 1200px;/* no */
+            margin: 174px auto 0;/* no */
             .right-blue-bar{
-                margin: 0 0 20px 1152px; /* no */
+                margin: 0 0 0 1152px; /* no */
             }
             .fb-business{
-                margin-top: 20px; /* no */
+                margin-top: 20px;/* no */
                 text-align: right;
-                line-height: 32px; /* no */
-                font-size: 42px; /* no */
+                line-height: 32px;/* no */
+                font-size: 32px; /* no */
                 font-family: '微软雅黑';
                 font-weight: bold;
                 color: #444444;
             }
         }
         .business-content{
+            width: 1200px;/* no */
             display: flex; 
-            width: 1200px; /* no */
             margin: 29px auto 0; /* no */
             .extracurricular-training{
                 width: 281px; /* no */
@@ -612,7 +618,7 @@
                     height: 78px; /* no */
                     line-height: 78px; /* no */
                     text-align: center;
-                    font-size: 21px; /* no */
+                    font-size: 21px;/* no */
                     font-family: '微软雅黑';
                     font-weight: normal;
                     color: #FFFFFF;
@@ -637,14 +643,14 @@
                 padding-top: 9px; /* no */
                 height: 448px; /* no */
                 .business-title{
-                    width: 190px; /* no */
-                    height: 50px; /* no */
+                    width: 190px;  /* no */
+                    height: 50px;  /* no */
                     text-align: center;
-                    font-size: 21px; /* no */
+                    font-size: 21px;  /* no */
                     font-family: '微软雅黑';
                     font-weight: normal;
                     color: #FFFFFF;
-                    margin: 0 auto 9px; /* no */
+                    margin: 0 auto 9px;  /* no */
                     line-height: normal;
                     padding-top: 5px; /* no */
                     padding-bottom: 5px; /* no */
@@ -656,65 +662,66 @@
         }
     }
     .culture{
-        // display: flex; 
         width: 100%;
-        background: #fff;
+        background: #f6f6f6;
+        margin-top: 193px; /* no */
+       padding-bottom: 216px; /* no */
         .fb-vn{
             display: flex; 
             width: 1200px; /* no */
             margin: 0 auto;
-            height: 316px; /* no */
-            overflow: hidden;
-        }
-        .left-img{
-            width: 482px; /* no */
-            height: 166px; /* no */
-            margin-right: 82px; /* no */
-            img{
-                display: block;
-                width: 100%;
-                height: 100%;
+            .left-img{
+                width: 615px; /* no */
+                height: 419px; /* no */
+                margin-left: -137px;/* no */
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
             }
-        }
-        .right-content{
-            width: 625px;  /* no */
-            height: 239px; /* no */
-            margin-left: auto;
-            .right-blue-bar{
-                display: flex;
+            .right-content{
+                width: 625px; /* no */
+                height: 239px; /* no */
+                margin-top: 88px;/* no */
                 margin-left: auto;
-                margin-top: 8px; /* no */
-                margin-bottom: 20px; /* no */
+                .right-blue-bar{
+                    display: flex;
+                    margin-left: auto;
+                    margin-top: 8px;
+                    margin-bottom: 20px; /* no */
+                }
+                .fb-business{
+                    text-align: right;
+                    line-height: 32px;/* no */
+                    font-size: 32px; /* no */
+                    font-family: '微软雅黑';
+                    font-weight: bold;
+                    color: #444444;
+                    margin-bottom: 28px; /* no */
+                }
+                .culture-content{
+                    width: 100%;
+                    height: auto;
+                    text-align: left;
+                    font-size: 15px; /* no */
+                    font-family: '微软雅黑';
+                    font-weight: 400;
+                    color: #444444;
+                    line-height: 27px; /* no */
+                }
             }
-            .fb-business{
-                text-align: right;
-                line-height: 32px; /* no */
-                font-size: 42px; /* no */
-                font-family: '微软雅黑';
-                font-weight: bold;
-                color: #444444;
-                margin-bottom: 28px; /* no */
-            }
-            .culture-content{
-                width: 100%;
-                height: auto;
-                text-align: left;
-                font-size: 15px; /* no */
-                font-family: '微软雅黑';
-                font-weight: 400;
-                color: #444444;
-                line-height: 27px; /* no */
-            }
-        }
+        }   
     }
     .space{
         width: 100%;
-        height: 20px;  /* no */
+        height: 20px; /* no */
     }
     .spaces{
         width: 100%;
-        height: 13px;  /* no */
+        height: 13px; /* no */
     }
+    
     .left-point{
         float: left;
         padding-left: 24px; /* no */

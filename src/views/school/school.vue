@@ -12,24 +12,26 @@
                 <div style="height: 55px; display:flex; position:relation">
                     <div class="f-right" v-for="(item , index) in popup" :key="index" @mouseout="changes(false,index)" @mouseover="changeMask(true,index)">
                         <div class="radiu">{{item.address}}</div>
-                        <div class="wrap" v-if="item.active" @mouseout="changeMasks(false,index)" @mouseover="change(true,index)">
-                            <div class="triangle1"></div>
-                            <div class="triangle2"></div>
-                            <div class="show">
-                                <div class='f-high'>
-                                    <div class="f-code">
-                                        <img :src="item.img" alt="">
+                        <transition name="fade">
+                            <div class="wrap" v-if="item.active" @mouseout="changeMasks(false,index)" @mouseover="change(true,index)">
+                                <div class="triangle1"></div>
+                                <div class="triangle2"></div>
+                                <div class="show">
+                                    <div class='f-high'>
+                                        <div class="f-code">
+                                            <img :src="item.img" alt="">
+                                        </div>
+                                        <span >{{item.names}}</span>
                                     </div>
-                                    {{item.names}}
-                                </div>
-                                <div class='f-high' v-if="item.imgs">
-                                    <div class="f-code">
-                                        <img :src="item.imgs" alt="">
+                                    <div class='f-high' v-if="item.imgs">
+                                        <div class="f-code">
+                                            <img :src="item.imgs" alt="">
+                                        </div>
+                                        {{item.name}}
                                     </div>
-                                    {{item.name}}
                                 </div>
                             </div>
-                        </div>
+                        </transition>
                     </div>
                 </div>
                 <div class="pack" @click="goTo">
@@ -197,7 +199,7 @@ export default {
                 line-height: 225px;
                 font-size: 29px;
                 color: #444;
-                font-weight: bold;
+                font-weight: 400;
                 span{
                     display: inline-block;
                     margin-left: 71px;
@@ -215,10 +217,11 @@ export default {
             line-height: 53px;
             width: 103px;
             height: 55px;
+            font-size: 25px;
+            color: #444;
             background: #F6F6F6;
             box-shadow: 2px 6px 0px 0px rgba(207, 232, 255, 0.3);
             border-radius: 27px !important;
-            background: #fff;
             border: 1px solid #dcdfe6;
         }
     }
@@ -231,7 +234,7 @@ export default {
         .wrap{
             .show{
                 .f-high{
-                       font-size: 16px;
+                    font-size: 16px;
                 }
             }
         }
@@ -254,7 +257,7 @@ export default {
             width: 135px;
             text-align: center;
             color: #444;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 400;
             margin-top: 20px;
             .f-code{
@@ -265,6 +268,9 @@ export default {
                     width: 100%;
                     height: 100%;
                 }
+            }
+            span{
+                -webkit-transform:scale(0.8);
             }
         }
         .f-high:nth-child(2){
@@ -305,6 +311,12 @@ export default {
     }
     .pack:hover{
         cursor: pointer;
+    }
+    .fade-enter-active,.fade-leave-active {
+        transition: opacity .5s
+    }
+    .fade-enter,.fade-leave-active {
+        opacity: 0
     }
 }
 @media screen and (min-width: 1600px) {
@@ -370,7 +382,7 @@ export default {
                 line-height: 225px; /* no */
                 font-size: 29px; /* no */
                 color: #444;
-                font-weight: bold;
+                font-weight: 400;
                 span{
                     display: inline-block;
                     margin-left: 71px; /* no */
@@ -384,6 +396,8 @@ export default {
     .f-right{
         margin-right: 45px; /* no */
         .radiu{
+            font-size: 25px; /* no */
+            color: #444;
             text-align: center;
             line-height: 53px; /* no */
             width: 103px; /* no */
@@ -391,7 +405,6 @@ export default {
             background: #F6F6F6;
             box-shadow: 2px 6px 0px 0px rgba(207, 232, 255, 0.3); /* no */
             border-radius: 27px !important; /* no */
-            background: #fff;
             border: 1px solid #dcdfe6; /* no */
         }
     }
@@ -427,7 +440,7 @@ export default {
             width: 135px; /* no */
             text-align: center;
             color: #444;
-            font-size: 18px; /* no */
+            font-size: 16px; /* no */
             font-weight: 400;
             margin-top: 20px; /* no */
             .f-code{
@@ -438,6 +451,9 @@ export default {
                     width: 100%;
                     height: 100%;
                 }
+            }
+            span{
+                -webkit-transform:scale(0.8) !important;
             }
         }
         .f-high:nth-child(2){
@@ -478,6 +494,12 @@ export default {
     }
     .pack:hover{
         cursor: pointer;
+    }
+    .fade-enter-active,.fade-leave-active {
+        transition: opacity .5s
+    }
+    .fade-enter,.fade-leave-active {
+        opacity: 0
     }
 }
 </style>

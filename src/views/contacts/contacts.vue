@@ -1,7 +1,10 @@
 <template>
     <div>
         <div class="bg">
-            <img src="./image/banner.png" alt="">
+            <div class="contacts-img">
+                <img src="./image/banner1.png" alt="">
+            </div>
+            
         </div>
         <div class="nav">
             <div class="four-nav">
@@ -43,15 +46,21 @@ export default {
 <style scoped lang='less'>
 @media screen and (max-width: 1600px){
     .bg{
-        background-image: url('./image/banner.png');
-        background-size: cover;
-        background-position: 50% 100%;
-        width: 100%;
+        width: 1200px;
         height: auto;
-        img{
-            width: 100%;
-            height: 100%;
+        margin: 0 auto;
+        .contacts-img{
+            width: 1343px;
+            height: 539px;
+            margin-top: 64px;
+            margin-left: -86px;
+            margin-bottom: 50px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
+        
     }
     .nav{
         width: 100%;
@@ -74,6 +83,7 @@ export default {
                 font-family: '微软雅黑';
                 color: #444;
                 font-weight: 400;
+                border-radius: 13px;
                 span{
                     display: inline-block;
                     width: 6px;
@@ -93,14 +103,19 @@ export default {
 }
 @media screen and (min-width: 1600px){
     .bg{
-        background-image: url('./image/banner.png');
-        background-size: cover;
-        background-position: 50% 100%;
-        width: 100%;
+        width: 1200px; /* no */
         height: auto;
-        img{
-            width: 100%;
-            height: 100%;
+        margin: 0 auto;
+        .contacts-img{
+            width: 1343px; /* no */
+            height: 539px; /* no */
+            margin-top: 64px; /* no */
+            margin-left: -86px; /* no */
+            margin-bottom: 50px; /* no */
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
     .nav{
@@ -124,6 +139,7 @@ export default {
                 font-family: '微软雅黑';
                 color: #444;
                 font-weight: 400;
+                border-radius: 13px; /* no */
                 span{
                     display: inline-block;
                     width: 6px; /* no */

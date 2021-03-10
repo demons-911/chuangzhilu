@@ -64,7 +64,7 @@ export default {
                 line-height: 225px;
                 text-align: center;
                 font-size: 29px;
-                font-weight: bold;
+                // font-weight: bold;
                 color: #444;
                 span{
                     display: inline-block;
@@ -81,7 +81,7 @@ export default {
                 color: #444;
                 margin-left: 11px;
                 .code-img{
-                    margin-top: 56px;
+                    margin: 56px auto 0;
                     width: 106px;
                     height: 106px;
                     img{
@@ -147,7 +147,7 @@ export default {
                 line-height: 225px; /* no */
                 text-align: center;
                 font-size: 29px; /* no */
-                font-weight: bold;
+                // font-weight: bold;
                 color: #444;
                 span{
                     display: inline-block;
@@ -164,7 +164,7 @@ export default {
                 color: #444;
                 margin-left: 11px; /* no */
                 .code-img{
-                    margin-top: 56px; /* no */
+                    margin: 56px auto 0; /* no */
                     width: 106px; /* no */
                     height: 106px; /* no */
                     img{

@@ -11,6 +11,8 @@ import Service from '../views/service/service.vue'
 import Talent from '../views/talent/talent.vue'
 import Cooperation from '../views/cooperation/cooperation.vue'
 import School from '../views/school/school.vue'
+import onlineServices from '../views/online-services/online-services.vue'
+import About from '../views/about/about.vue'
 
 Vue.use(VueRouter)
 
@@ -65,6 +67,16 @@ const routes = [
     path: '/school',
     name: 'school',
     component: School
+  },
+  {
+    path: '/online-services',
+    name: 'online-service',
+    component: onlineServices
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: About
   }
 ]
 

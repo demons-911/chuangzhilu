@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header-top">
-            <div class="logo" >
+            <div class="logo" @click="goto">
                 <div class="picture">
                     <img src="./image/logo.png" alt="">
                 </div>
@@ -9,12 +9,12 @@
             </div>
             <div class="top-nav">
                 <el-menu :default-active="getActive" class="el-menu-demo" mode="horizontal" @select="handleSelect" active-text-color="#409EFF">
-                    <el-menu-item index="1"><p class="nav" @click="goto">关于我们</p></el-menu-item>
+                    <el-menu-item index="1"><p class="nav">关于我们</p></el-menu-item>
                     <el-menu-item index="2"><p class="nav">线上服务</p></el-menu-item>
                     <el-menu-item index="5"><p class="nav">线下培训</p></el-menu-item>
                     <el-menu-item index="4"><p class="nav">联系我们</p></el-menu-item>
                     <el-menu-item index="3">
-                        <p class="nav">
+                        <p class="nav" @mouseover="mouseOver">
                             <el-dropdown @command="sumTypeCkeck">
                                 <span class="el-dropdown-link">
                                     {{sumType}}
@@ -47,17 +47,15 @@ export default {
         handleSelect(key, keyPath) {
           console.log(key)
             if (key == 1) {
-                
+                this.$router.push({path:'/about',option:''})
             }else if (key == 2) {
-                console.log(222222)
+                this.$router.push({path:'/online-services',option:''})
             }else if(key==3){
-                console.log(333333)
-
+                
             }else if (key == 4){
                  this.$router.push({path:'/contacts/'})
             }else if(key==5){
                 this.$router.push({path:'/training'})
-                console.log(44444)
             }
         },
         goto(){
@@ -72,7 +70,21 @@ export default {
             }else if(type=='实习机会'){
                 this.$router.push({path:'/internship'})
             }
-        }
+        },
+        mouseOver(){
+            setTimeout(function(){
+                var title=document.getElementsByClassName('el-popper')[0]
+                let style=window.getComputedStyle(title,null).left
+                let styles=style.replace('px','')
+                let lefts=parseFloat(styles)
+                let top=window.getComputedStyle(title,null).top
+                let tops=top.replace('px','')
+                let top1=parseFloat(tops)
+                var high=lefts+20
+                title.setAttribute('style','left:'+high+'px' + ';' +'top:'+top1+'px')
+            },330)
+        },
+        
     }
 }
 </script>
@@ -143,22 +155,27 @@ export default {
     /deep/ .el-menu--horizontal>.el-menu-item{
         line-height: 90px;
         height: 100%;
-        // padding-right: 0 !important;
     }
     /deep/ .el-menu.el-menu--horizontal{
         height: 100%;
     }
     .el-dropdown-menu{
-        position: absolute;
-        left: 1280px !important;
-        right: 140px;
-        font-size: 15px;
+        width: 140px;
+        // position: absolute;
+        // left:  82% !important;
+        // right: 140px;
+        
     }
     .el-dropdown-menu__item{
         text-align: center;
+        font-family: '微软雅黑';
+        font-size: 15px;
     }
     .el-menu-item * {
         vertical-align: inherit;
+    }
+    li:nth-child(5){
+        border-bottom-color: #f5f5f5 !important;
     }
 }
 @media screen and (min-width: 1600px) {
@@ -231,12 +248,12 @@ export default {
         height: 100%;
     }
     .el-dropdown-menu{
-        position: absolute;
-        left: 75% !important;
-        font-size: 15px; /* no */
+        width: 140px; /* no */
     }
     .el-dropdown-menu__item{
         text-align: center;
+        font-family: '微软雅黑';
+        font-size: 15px; /* no */
     }
     .el-menu-item * {
         vertical-align: inherit;

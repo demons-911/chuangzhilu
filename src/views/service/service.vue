@@ -176,7 +176,7 @@ export default {
                     font-family: '微软雅黑';
                     color: #444;
                     font-weight: 400;
-                    line-height: 106px;
+                    line-height: 121px;
                     margin-left: 70px;
                     margin-right: 99px;
                     span{
@@ -343,7 +343,7 @@ export default {
                     font-family: '微软雅黑';
                     color: #444;
                     font-weight: 400;
-                    line-height: 106px; /* no */
+                    line-height: 121px; /* no */
                     margin-left: 70px; /* no */
                     margin-right: 99px; /* no */
                     span{

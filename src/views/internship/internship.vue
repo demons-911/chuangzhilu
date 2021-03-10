@@ -5,7 +5,7 @@
                 <div class="top-line"></div>
                 <div class="social">实习机会</div>
                 <div class="social-content">如果你想利用课余时间尝试一份工作 </br> 如果你想深入了解教育行业</div>
-                <div class="blue-content">我们诚挚邀请你通过以下 <span>实习项目</span> 加入我们</div>
+                <div class="blue-content">我们诚挚邀请你通过以下 <span>实习项目 加入我们</span></div>
             </div>
             <div class="content-img">
                 <img src="./image/internship.png" alt="">
@@ -127,7 +127,7 @@ export default {
                 height: 45px;
                 border-radius: 22px;
                 opacity: 0.9;
-                box-shadow: 0px 2px 8px 0px #F5F9FC;
+                box-shadow: inset 0px 2px 8px 0px #F5F9FC;
                 color: #fff;
                 font-size: 21px;
                 line-height: 45px;
@@ -248,7 +248,7 @@ export default {
                 width: 450px;
                 height: 152px;
                 margin: 60px 80px 0 auto;
-                box-shadow: 6px 8px 3px 0px rgba(199, 219, 238, 0.1);
+                // box-shadow: 6px 8px 3px 0px rgba(199, 219, 238, 0.1);
                 img{
                     width: 100%;
                     height: 100%;
@@ -267,7 +267,7 @@ export default {
                 width: 450px;
                 height: 152px;
                 margin: 60px 0 0 80px;
-                box-shadow: 6px 8px 3px 0px rgba(199, 219, 238, 0.1);
+                // box-shadow: 6px 8px 3px 0px rgba(199, 219, 238, 0.1);
                 img{
                     width: 100%;
                     height: 100%;
@@ -367,7 +367,7 @@ export default {
                 height: 45px; /* no */
                 border-radius: 22px; /* no */
                 opacity: 0.9;
-                box-shadow: 0px 2px 8px 0px #F5F9FC; /* no */
+                box-shadow: inset 0px 2px 8px 0px #F5F9FC; /* no */
                 color: #fff;
                 font-size: 21px; /* no */
                 line-height: 45px; /* no */
@@ -487,7 +487,7 @@ export default {
                 width: 450px; /* no */
                 height: 152px; /* no */
                 margin: 60px 80px 0 auto; /* no */
-                box-shadow: 6px 8px 3px 0px rgba(199, 219, 238, 0.1); /* no */
+                // box-shadow: 6px 8px 3px 0px rgba(199, 219, 238, 0.1); /* no */
                 img{
                     width: 100%;
                     height: 100%;
@@ -506,7 +506,7 @@ export default {
                 width: 450px; /* no */
                 height: 152px; /* no */
                 margin: 60px 0 0 80px; /* no */
-                box-shadow: 6px 8px 3px 0px rgba(199, 219, 238, 0.1); /* no */
+                // box-shadow: 6px 8px 3px 0px rgba(199, 219, 238, 0.1); /* no */
                 img{
                     width: 100%;
                     height: 100%;

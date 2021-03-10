@@ -70,7 +70,7 @@ export default {
                     line-height: 225px;
                     text-align: left;
                     font-size: 29px;
-                    font-weight: bold;
+                    font-weight: 400;
                     color: #444;
                     // opacity: 0.1;
                     span{
@@ -159,7 +159,7 @@ export default {
                     line-height: 225px; /* no */
                     text-align: left;
                     font-size: 29px; /* no */
-                    font-weight: bold;
+                    font-weight: 400;
                     color: #444;
                     // opacity: 0.1;
                     span{
